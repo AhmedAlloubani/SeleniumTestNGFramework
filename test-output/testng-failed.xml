@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [regression]">
+  <test thread-count="5" parallel="classes" name="parallelRegression(failed)">
+    <classes>
+      <class name="test.SauceDemoLoginTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="sauceDemoTest1"/>
+          <include name="sauceDemoTest3"/>
+          <include name="quitDriver"/>
+        </methods>
+      </class> <!-- test.SauceDemoLoginTest -->
+      <class name="test.AmazonSearchTests">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="objectData"/>
+          <include name="afterMethod"/>
+          <include name="amazonSerach" invocation-numbers="0 1 3"/>
+        </methods>
+      </class> <!-- test.AmazonSearchTests -->
+      <class name="test.AmazonSearchWithExcel">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="amazonSearchWithExcel" invocation-numbers="0 1"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- test.AmazonSearchWithExcel -->
+    </classes>
+  </test> <!-- parallelRegression(failed) -->
+</suite> <!-- Failed suite [regression] -->
