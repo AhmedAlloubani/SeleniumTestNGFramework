@@ -1,0 +1,12 @@
+<suite name="regression">
+	<test name="parallelRegression" parallel="classes" thread-count="3">
+		<classes>
+			<class name="test.AmazonSearchTests" />
+			<class name="test.AmazonSearchWithExcel" />
+			<class name="test.SauceDemoLoginTest" />
+		</classes>
+
+	</test>
+
+
+</suite>
